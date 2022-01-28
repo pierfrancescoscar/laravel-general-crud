@@ -15,9 +15,9 @@ class JokesTableSeeder extends Seeder
     {
         $jokes = config('joke-data');
 
-        foreach ($jokes as $joke) {
+        foreach($jokes as $joke) {
 
-            $new_comic = new Joke();
+            $new_joke = new Joke();
 
             $new_joke->title = $joke['title'];
             $new_joke->description = $joke['description'];
