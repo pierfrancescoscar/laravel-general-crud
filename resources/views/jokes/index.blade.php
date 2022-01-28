@@ -30,7 +30,7 @@
                                     <a class="btn btn-primary" href="/">Edit</a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary" href="/">Delete</a>
+                                    <a class="btn btn-danger" href="/">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
