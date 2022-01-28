@@ -4,7 +4,7 @@
     <section class="container p-3">
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 p-3">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -24,10 +24,10 @@
                                 <td>{{ $joke->title }}</td>
                                 <td>{{ $joke->description }}</td>
                                 <td>
-                                    <a class="btn btn-success" href="/">Show</a>
+                                    <a class="btn btn-success" href="{{route('jokes.show', $joke->id)}}">Show</a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary" href="/">Edit</a>
+                                    <a class="btn btn-primary" href="{{route('jokes.edit', $joke->id)}}">Edit</a>
                                 </td>
                                 <td>
                                     <a class="btn btn-danger" href="/">Delete</a>
