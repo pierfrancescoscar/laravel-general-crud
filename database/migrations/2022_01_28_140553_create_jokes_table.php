@@ -17,7 +17,7 @@ class CreateJokesTable extends Migration
             $table->id();
             $table->string('title', 200);
             $table->text('description');
-            $table->string('thumb');
+            $table->text('thumb');
             $table->timestamps();
         });
     }
