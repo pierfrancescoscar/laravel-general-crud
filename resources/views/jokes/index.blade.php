@@ -39,7 +39,7 @@
                                     <form action="{{route('jokes.destroy', $joke->id)}}" method="POST">
                                         @csrf 
                                         @method('DELETE')
-                                        <a class="btn btn-danger" href="{{route('jokes.destroy', $joke->id)}}">Delete</a>
+                                        <button type="submit" class="btn btn-danger" value="delete">Delete</button>
                                     </form>
                                 </td>
                             </tr>
