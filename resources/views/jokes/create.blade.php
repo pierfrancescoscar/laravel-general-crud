@@ -2,32 +2,30 @@
 
 @section('main-content')
     <section class="container p-3 py-5">
-        <h3 class="mb-5">Edit: {{ $joke->title }}</h3>
+        <h3 class="mb-5">Post a new joke</h3>
 
         <div class="row text-center">
             <div class="col-12">
-                <form action="{{route('jokes.update', $joke->id)}}" method="POST">
+                <form action="{{route('jokes.store')}}" method="POST">
                     @csrf
-                    @method('PATCH')
-
                     {{-- Title --}}
                     <label for="title" class="form-label">Title</label>
                     <div class="mb-3">
-                        <input type="text" class="form-label" id="title" name="title" value="{{$joke->title}}">
+                        <input type="text" class="form-label" id="title" name="title">
                     </div>
                     {{-- Description --}}
                     <label for="description" class="form-label">Description</label>
                     <div class="mb-3">
-                        <textarea type="text" class="form-label" id="description" name="description" value="{{$joke->description}}"></textarea>
+                        <textarea type="text" class="form-label" id="description" name="description"></textarea>
                     </div>
                     {{-- Thumb --}}
                     <label for="thumb" class="form-label">Thumb</label>
                     <div class="mb-3">
-                        <input type="text" class="form-label" id="thumb" name="thumb" value="{{$joke->thumb}}">
+                        <input type="text" class="form-label" id="thumb" name="thumb">
                     </div>
                     {{-- Submit --}}
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Update Joke</button>
+                        <button type="submit" class="btn btn-primary">Post a new joke</button>
                     </div>
                 </form>
             </div>

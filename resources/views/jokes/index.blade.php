@@ -3,6 +3,12 @@
 @section('main-content')
     <section class="container p-3">
 
+        @if(session('deleted'))
+        <div class="alert alert-success">
+            <strong>{{ session('deleted') }} successfully deleted</strong>
+        </div>
+        @endif
+
         <div class="row">
             <div class="col-12 p-3">
                 <table class="table table-striped">
@@ -30,7 +36,11 @@
                                     <a class="btn btn-primary" href="{{route('jokes.edit', $joke->id)}}">Edit</a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" href="/">Delete</a>
+                                    <form action="{{route('jokes.destroy', $joke->id)}}" method="POST">
+                                        @csrf 
+                                        @method('DELETE')
+                                        <a class="btn btn-danger" href="{{route('jokes.destroy', $joke->id)}}">Delete</a>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

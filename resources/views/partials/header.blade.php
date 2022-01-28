@@ -10,8 +10,13 @@
               <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="{{ route('jokes.index') }}">Archive</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="{{ route('jokes.create') }}">Post a new Joke</a>
               </li>
             </ul>
           </div>
