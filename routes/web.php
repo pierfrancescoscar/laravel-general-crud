@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Homepage
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Joke
+Route::resource('/jokes', 'JokeController');
