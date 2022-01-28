@@ -48,7 +48,7 @@ class JokeController extends Controller
 
         $new_joke->save();
 
-        return redirect()->route('joke.show', $new_joke->id);
+        return redirect()->route('jokes.show', $new_joke->id);
     }
 
     /**
@@ -100,7 +100,7 @@ class JokeController extends Controller
 
         $joke->update($data);
 
-       return redirect()->route('joke.show', $joke->id);
+       return redirect()->route('jokes.show', $joke->id);
     }
 
     /**
